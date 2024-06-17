@@ -11,7 +11,7 @@
 - To install auto-complete
   - terraform -install-autocomplete
 
-## Quick start
+## Quick start of Terraform Docker and Nginx
 
 - open -a Docker
 - mkdir learn-terraform-docker-container
@@ -23,3 +23,22 @@
   - https://stackoverflow.com/questions/67989620/error-pinging-docker-server-on-terraform-apply
 - Check if nginx is running at - http://localhost:8000/
 - terraform destroy
+
+## Update AWS CLI locally
+
+- curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+  sudo installer -pkg AWSCLIV2.pkg -target /
+- aws --version
+
+---
+
+## Spinnig up EC2 instance using terraform
+
+- playing-terraform/ec2-instance.tf
+- terraform init
+- terraform plan
+- Error:
+  - Error: Invalid function argument, 11: public_key = file("~/.ssh/id_rsa.pub") # Path to your public key
+  - ssh-keygen -t rsa -C "tsabunkar@gmail.com" -f ~/.ssh/id_rsa -P ""
+- terraform apply
+- terraform destory
