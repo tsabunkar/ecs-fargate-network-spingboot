@@ -42,3 +42,14 @@
   - ssh-keygen -t rsa -C "tsabunkar@gmail.com" -f ~/.ssh/id_rsa -P ""
 - terraform apply
 - terraform destory
+
+# Terraform Commands
+
+- Terraform Init Command (initialize the terraform locally)
+  - \$ terraform init -backend-config="backend-config-file-path"
+- Terraform Plan Command (makes a deployment plan for resources)
+  - \$ terraform plan -var-file="var-file-path" -var="key=value"
+- Terraform Apply Command (Deploy the resources)
+  - \$ terraform apply -var-file="var-file-path" -var="key=value"
+- Terraform Destory Command (Destory the resources`)
+  - \$ terraform destory -var-file="var-file-path" -var="key=value"
