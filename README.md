@@ -53,3 +53,14 @@
   - \$ terraform apply -var-file="var-file-path" -var="key=value"
 - Terraform Destory Command (Destory the resources`)
   - \$ terraform destory -var-file="var-file-path" -var="key=value"
+- To apply the automatically without the confirmation
+  - \$ terraform apply --auto-approve
+- Terraform Graph Command (relationships between objects in a Terraform configuration)
+  - \$ terraform graph -type=plan
+  - \$ terraform graph -type=plan-refresh-only
+  - \$ terraform graph -type=plan-destroy
+  - \$ terraform graph -type=apply
+  - To view in Graph
+    - \$ brew install graphviz (To install dot -> https://en.wikipedia.org/wiki/DOT_(graph_description_language))
+    - \$ terraform graph -type=plan | dot -Tpng >graph.png
+    - \$ ...oper/Workspace/vsc/ecs-fargate-network-spingboot/playing-terraform/variables > terraform graph -type=plan | dot -Tpng >graph.png [Check the variables folder you will have a new image created graph.png]
